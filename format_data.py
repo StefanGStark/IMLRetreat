@@ -58,8 +58,8 @@ def plot_data(data, figsize=(18,2)):
     plt.tight_layout()
     return ax
 
-wdir = '/Users/stefanstark/Desktop/Academics/IMLRetreat2016/EEG_data'
-mat_paths = glob.glob(os.path.join(wdir, '*.mat'))
+wdir = os.path.dirname(__file__)
+mat_paths = glob.glob(os.path.join(wdir, 'EEG_data', '*.mat'))
 
 def load_exps():
     _FEATURES = None
