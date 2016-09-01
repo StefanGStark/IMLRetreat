@@ -7,19 +7,19 @@ import re
 import matplotlib.pyplot as plt
 import pdb
 
-# __globals__
-# __header__
-# __version__
-# artifacts
-# df
-# epochl
-# features_names
-# fs
-# maxep
-# Pspec
-# stages
-# windowl
-# X (time points x features)
+# Loads EEG data and formats it as input for a NN
+# features:
+#   Label for the EEG data
+# exp_data:
+#   Dictionary of numpy float arrays of features x time 
+# exp_labels:
+#   Assigned sleep stage at each time point. 0 for wake, 4 for REM
+
+# Assumptions:
+#   You have a directory EEG_data with .mat files in the same directory as this
+#   script, or change the wdir variable
+
+
 
 def format_featnames(matobj):
     names = sp.asarray([x[0] for x in matobj['features_names'][0]])
